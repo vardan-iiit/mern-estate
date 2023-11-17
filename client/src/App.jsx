@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
@@ -10,9 +11,10 @@ import CreateListing from './pages/CreateListing';
 import UpdateListing from './pages/UpdateListing';
 import Listing from './pages/Listing';
 import Search from './pages/Search';
-
+import Adminportal from './pages/AdminDashboard';
 export default function App() {
   return (
+    
     <BrowserRouter>
       <Header />
       <Routes>
@@ -22,7 +24,8 @@ export default function App() {
         <Route path='/about' element={<About />} />
         <Route path='/search' element={<Search />} />
         <Route path='/listing/:listingId' element={<Listing />} />
-
+        <Route path='/admin' element={<Adminportal />} />
+        {/* <Route path='/admin/manage-listings' element={<ManageListings />} /> */}
         <Route element={<PrivateRoute />}>
           <Route path='/profile' element={<Profile />} />
           <Route path='/create-listing' element={<CreateListing />} />
