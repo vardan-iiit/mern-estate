@@ -68,6 +68,11 @@ export default function Header() {
               <li className=' text-slate-700 hover:underline'> Sign in</li>
             )}
           </Link>
+          <a href="/payment">
+  <button className="bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95">
+    Make a Payment
+  </button>
+  </a>
         </ul>
       </div>
     </header>

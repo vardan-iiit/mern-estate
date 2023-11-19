@@ -12,6 +12,7 @@ import UpdateListing from './pages/UpdateListing';
 import Listing from './pages/Listing';
 import Search from './pages/Search';
 import Adminportal from './pages/AdminDashboard';
+import Payment from './pages/payment';
 export default function App() {
   return (
     
@@ -34,6 +35,7 @@ export default function App() {
             element={<UpdateListing />}
           />
         </Route>
+        <Route path='/payment' element={<Payment />} />
       </Routes>
     </BrowserRouter>
   );
